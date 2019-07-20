@@ -26,6 +26,7 @@ SOFTWARE.
 '''
 import flask, os
 from flask import Flask, render_template, jsonify, session, request, g
+from flask_cors import CORS
 from functools import wraps
 
 class Response:
@@ -114,6 +115,8 @@ class Frasco(Flask):
         self.config['SECRET_KEY'] = os.urandom(24)
         # 認証処理用ユーザークラス
         self.AuthUser = User
+        # Cross Origin Resource Sharing 有効化
+        CORS(self)
 
     def get(self, route):
         ''' get method routing decorator '''

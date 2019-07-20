@@ -17,6 +17,10 @@
         ```bash
         $ pip install flask
         ```
+    - flask-cors (Cross Origin Resource Sharing): `3.0.8`
+        ```bash
+        $ pip install flask-cors
+        ```
 
 ---
 
